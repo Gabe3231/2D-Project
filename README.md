@@ -8,7 +8,9 @@ create their own scene (TBD)
 - Gabriel did the initial commit and did the main scene as well as the player scene and added some functionality. He connected that to the main scene.
 - Sakif added the meteor scene which is connected to the main scene.
 - Jan's portion TBD by friday
+
 make an instance of that scene in the main scene (COMPLETED)
 commit and push their changes to the repository (COMPLETED)
 At least one branch and one successful merge from a branch into the master. (TBD)
 Submit the link to the repository page on blackboard. (TBD)
+
