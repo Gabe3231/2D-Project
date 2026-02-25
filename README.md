@@ -1,5 +1,6 @@
 Lab 3: Collective Edits
 The following lab is a group project to be completed with you 2D game design group. The lab will be graded pass fail and everyone in the group will receive the same grade. Work together!
+
 Please create a Github Repository that:
 Lists each group member as a collaborator (COMPLETED)
 
@@ -18,5 +19,6 @@ commit and push their changes to the repository (COMPLETED)
 At least one branch and one successful merge from a branch into the master. (TBD)
 
 Submit the link to the repository page on blackboard. (TBD)
+
 
 
