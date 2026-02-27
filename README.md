@@ -10,7 +10,7 @@ This scene should have instances of different nested scenes contributed by each 
 create their own scene (COMPLETE) 
 - Gabriel did the initial commit and did the main scene as well as the player scene and added some functionality. He connected that to the main scene.
 - Sakif added the meteor scene which is connected to the main scene.
-- Jan's added the spaceship laser scene and functionaloty on friday
+- Jan's added the spaceship laser scene and added the functionality on friday. Its connected to player which in in the main scene.
 
 make an instance of that scene in the main scene (COMPLETED)
 
@@ -19,6 +19,7 @@ commit and push their changes to the repository (COMPLETED)
 At least one branch and one successful merge from a branch into the master. (COMPLETED) (I MERGED LAB-3 Branch into the main after we all contributed to that branch)
 
 Submit the link to the repository page on blackboard. (COMPLETED)
+
 
 
 
