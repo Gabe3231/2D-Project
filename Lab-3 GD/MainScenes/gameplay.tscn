@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0e2ip3fv7ele"]
+
+[ext_resource type="PackedScene" uid="uid://bk1hw8rm6k2mj" path="res://Player/player.tscn" id="1_dmsrt"]
+[ext_resource type="PackedScene" uid="uid://c1fb6grwkl63w" path="res://Meteor/meteor.tscn" id="2_ewbf5"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_dmsrt")]
+position = Vector2(-1, -1)
+speed = 300.0
+
+[node name="Meteor" parent="." instance=ExtResource("2_ewbf5")]
+position = Vector2(-1, -1)
