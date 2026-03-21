@@ -1,0 +1,51 @@
+[gd_scene load_steps=11 format=3 uid="uid://drpo0o31b0gcq"]
+
+[ext_resource type="Texture2D" uid="uid://cvro1bi3sxly2" path="res://textures/explosion-1-a/Sprites/explosion-1.png" id="1_j5qkm"]
+[ext_resource type="Texture2D" uid="uid://dourkdfbut4yy" path="res://textures/explosion-1-a/Sprites/explosion-2.png" id="2_f1bv7"]
+[ext_resource type="Texture2D" uid="uid://cop6is8v7ugdh" path="res://textures/explosion-1-a/Sprites/explosion-3.png" id="3_n7wav"]
+[ext_resource type="Texture2D" uid="uid://djbg0nhu4a8k8" path="res://textures/explosion-1-a/Sprites/explosion-4.png" id="4_h3vgf"]
+[ext_resource type="Texture2D" uid="uid://cqesdmg27uot" path="res://textures/explosion-1-a/Sprites/explosion-5.png" id="5_bxqt1"]
+[ext_resource type="Texture2D" uid="uid://boaecavxdyt58" path="res://textures/explosion-1-a/Sprites/explosion-6.png" id="6_mtvcv"]
+[ext_resource type="Texture2D" uid="uid://by24hbi77410y" path="res://textures/explosion-1-a/Sprites/explosion-7.png" id="7_gwskg"]
+[ext_resource type="Texture2D" uid="uid://c06xbp4743chy" path="res://textures/explosion-1-a/Sprites/explosion-8.png" id="8_o7vhp"]
+[ext_resource type="Script" uid="uid://b0l3yv6v2qq7g" path="res://Meteor/meteor_explosion.gd" id="9_f1bv7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rknxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j5qkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_f1bv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7wav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h3vgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bxqt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mtvcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gwskg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o7vhp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="explode" type="AnimatedSprite2D"]
+z_index = 14
+position = Vector2(0, -58)
+scale = Vector2(2.9375, 2.8125)
+sprite_frames = SubResource("SpriteFrames_rknxy")
+centered = false
+script = ExtResource("9_f1bv7")

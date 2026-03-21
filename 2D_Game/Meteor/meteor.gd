@@ -8,7 +8,7 @@ extends Area2D
 @export var life: int = 20
 @export var touch_damage: int = 1
 
-var oMeteorEffect := preload("res://meteor_effect.tscn")
+var oMeteorEffect := preload("res://Meteor/meteor_explosion.tscn")
 
 var speed: float = 0.0
 var rotationRate: float = 0.0
@@ -28,7 +28,7 @@ func damage(amount: int) -> void:
 	if life <= 0:
 		var effect = oMeteorEffect.instantiate()
 		get_tree().current_scene.add_child(effect)
-		effect.global_position = global_position
+		effect.global_position = $Sprite2D.global_position
 		queue_free()
 
 func _on_body_entered(body: Node):

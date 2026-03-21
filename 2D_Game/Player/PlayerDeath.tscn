@@ -1,0 +1,80 @@
+[gd_scene load_steps=18 format=3 uid="uid://dg6f6a717b3to"]
+
+[ext_resource type="Texture2D" uid="uid://doa8tnatr1teb" path="res://textures/explosion-1-e/Sprites/explosion-e1.png" id="1_wu78m"]
+[ext_resource type="Texture2D" uid="uid://bpkytgka73g5g" path="res://textures/explosion-1-e/Sprites/explosion-e2.png" id="2_lsfjm"]
+[ext_resource type="Texture2D" uid="uid://bhxo4v4f0v4te" path="res://textures/explosion-1-e/Sprites/explosion-e3.png" id="3_l5bm2"]
+[ext_resource type="Texture2D" uid="uid://ic67bwwudxp5" path="res://textures/explosion-1-e/Sprites/explosion-e4.png" id="4_dl644"]
+[ext_resource type="Texture2D" uid="uid://dqcydbl6xe1ir" path="res://textures/explosion-1-e/Sprites/explosion-e5.png" id="5_8ngja"]
+[ext_resource type="Texture2D" uid="uid://24vmjbmusflu" path="res://textures/explosion-1-e/Sprites/explosion-e13.png" id="6_heu2d"]
+[ext_resource type="Texture2D" uid="uid://doicwxbse60x2" path="res://textures/explosion-1-e/Sprites/explosion-e14.png" id="7_q0ndr"]
+[ext_resource type="Texture2D" uid="uid://rjkehtgugeka" path="res://textures/explosion-1-e/Sprites/explosion-e15.png" id="8_uwgit"]
+[ext_resource type="Texture2D" uid="uid://b1e368i8exdb3" path="res://textures/explosion-1-e/Sprites/explosion-e16.png" id="9_d6jjg"]
+[ext_resource type="Texture2D" uid="uid://dob8hsdue5ih3" path="res://textures/explosion-1-e/Sprites/explosion-e17.png" id="10_q2sf4"]
+[ext_resource type="Texture2D" uid="uid://ciitl8to2ksa3" path="res://textures/explosion-1-e/Sprites/explosion-e18.png" id="11_2jr3l"]
+[ext_resource type="Texture2D" uid="uid://bfbkpmgo7eelq" path="res://textures/explosion-1-e/Sprites/explosion-e19.png" id="12_m1p3h"]
+[ext_resource type="Texture2D" uid="uid://vepl2marw6r7" path="res://textures/explosion-1-e/Sprites/explosion-e20.png" id="13_qmpgq"]
+[ext_resource type="Texture2D" uid="uid://251cdti8631b" path="res://textures/explosion-1-e/Sprites/explosion-e21.png" id="14_j5ak4"]
+[ext_resource type="Texture2D" uid="uid://dfmba1mtch1qx" path="res://textures/explosion-1-e/Sprites/explosion-e22.png" id="15_yi051"]
+[ext_resource type="Script" uid="uid://dl1tw0l0pai8" path="res://Player/player_death.gd" id="16_lsfjm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtgmb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wu78m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lsfjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l5bm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dl644")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8ngja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_heu2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q0ndr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uwgit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d6jjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q2sf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2jr3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_m1p3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qmpgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_j5ak4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yi051")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="PlayerDeath" type="AnimatedSprite2D"]
+z_index = 12
+sprite_frames = SubResource("SpriteFrames_gtgmb")
+frame = 6
+frame_progress = 0.20093808
+script = ExtResource("16_lsfjm")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

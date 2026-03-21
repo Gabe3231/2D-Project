@@ -5,12 +5,11 @@ extends Area2D
 func _physics_process(delta):
 	position.y -= speed * delta
 
-
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	#remove nodes
 	queue_free()
 
-
+# does 1 damage when entering area
 func _on_area_entered(area):
 	if area.is_in_group("damagable"):
 		area.damage(1)

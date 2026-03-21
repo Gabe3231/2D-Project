@@ -1,4 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d20cq4bdu2tow"]
+[gd_scene load_steps=5 format=3 uid="uid://d20cq4bdu2tow"]
+
+[ext_resource type="Script" uid="uid://c7pa0in3kmpw" path="res://Story/story_scene_2.gd" id="1_nqs77"]
+[ext_resource type="Texture2D" uid="uid://bu2blu857msin" path="res://textures/SpaceBackground.png" id="2_v2hb1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x85j2"]
 font_size = 30
@@ -14,11 +17,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nqs77")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_right = 804.0
 offset_bottom = 808.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(397, 394)
+scale = Vector2(9.09375, 8.1796875)
+texture = ExtResource("2_v2hb1")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -28,7 +37,15 @@ offset_right = 793.0
 offset_bottom = 517.0
 text = "Sakif: We made it! 
 
-Captain: Don't get to exited just yet. We need to cut through the spacelanes to makeup for lost time."
+Captain: Don't get to exited just yet. We need to cut 
+through the flock of intersteller rays
+
+Sakif: But there's so many of them and aren't they
+a protected species.
+
+Jan: Yes, they are so we can't use our LASER.
+
+Captain: Lets just go slow and hope for the best."
 label_settings = SubResource("LabelSettings_x85j2")
 
 [node name="Button" type="Button" parent="Panel"]
@@ -45,7 +62,11 @@ offset_left = 74.0
 offset_top = 619.0
 offset_right = 731.0
 offset_bottom = 790.0
-text = "Survive 2 minutes in the asteroid field"
+text = "
+Survive 2 minutes
+"
 label_settings = SubResource("LabelSettings_nqs77")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

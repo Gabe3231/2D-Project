@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://xae4gi612vo"]
+[gd_scene load_steps=11 format=3 uid="uid://xae4gi612vo"]
 
 [ext_resource type="Texture2D" uid="uid://bh085opu5nfqi" path="res://textures/Screenshot 2026-03-03 at 12.07.07 pm.png" id="1_3jht0"]
 [ext_resource type="Texture2D" uid="uid://byyycnkigk7fq" path="res://textures/Screenshot_2026-03-05_at_6.20.55_pm-removebg-preview.png" id="2_abyik"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b3cbmfu8tsa3e" path="res://textures/audio/zen_man-melodic-techno-03-extended-version-moogify-9867.mp3" id="5_mplax"]
 [ext_resource type="PackedScene" uid="uid://djxf64f0ewof0" path="res://HUD/hud.tscn" id="6_bhpml"]
 [ext_resource type="Script" uid="uid://ck37ewr3quwy0" path="res://MainScenes/level_timer.gd" id="7_a1tsa"]
+[ext_resource type="PackedScene" uid="uid://laxbkpikopme" path="res://Transition/canvas_layer.tscn" id="9_a1tsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqwhf"]
 size = Vector2(806, 117)
@@ -81,5 +82,7 @@ wait_time = 120.0
 one_shot = true
 autostart = true
 script = ExtResource("7_a1tsa")
+
+[node name="Fade" parent="." instance=ExtResource("9_a1tsa")]
 
 [connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]

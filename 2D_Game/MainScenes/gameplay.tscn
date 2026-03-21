@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0e2ip3fv7ele"]
+[gd_scene load_steps=12 format=3 uid="uid://d0e2ip3fv7ele"]
 
+[ext_resource type="Script" uid="uid://k71onjyuodqw" path="res://MainScenes/gameplay.gd" id="1_7l8b1"]
 [ext_resource type="PackedScene" uid="uid://bk1hw8rm6k2mj" path="res://Player/player.tscn" id="1_dmsrt"]
 [ext_resource type="PackedScene" uid="uid://c1fb6grwkl63w" path="res://Meteor/meteor.tscn" id="2_ewbf5"]
 [ext_resource type="Texture2D" uid="uid://bh085opu5nfqi" path="res://textures/Screenshot 2026-03-03 at 12.07.07 pm.png" id="3_3tnba"]
@@ -8,11 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://djxf64f0ewof0" path="res://HUD/hud.tscn" id="6_i6y8e"]
 [ext_resource type="Script" uid="uid://ck37ewr3quwy0" path="res://MainScenes/level_timer.gd" id="7_uixu5"]
 [ext_resource type="AudioStream" uid="uid://b3cbmfu8tsa3e" path="res://textures/audio/zen_man-melodic-techno-03-extended-version-moogify-9867.mp3" id="8_b2ixk"]
+[ext_resource type="PackedScene" uid="uid://laxbkpikopme" path="res://Transition/canvas_layer.tscn" id="9_0c70a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x61r"]
 size = Vector2(806, 117)
 
 [node name="Gameplay" type="Node2D"]
+script = ExtResource("1_7l8b1")
 
 [node name="Player" parent="." instance=ExtResource("1_dmsrt")]
 position = Vector2(-1, -1)
@@ -80,7 +83,9 @@ script = ExtResource("7_uixu5")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_b2ixk")
-volume_db = 10.0
+volume_db = -10.0
 autoplay = true
+
+[node name="Fade" parent="." instance=ExtResource("9_0c70a")]
 
 [connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]

@@ -15,9 +15,8 @@ func _ready() -> void:
 	label.text += "[color=red][font_size=40]Down Arrow = Move Down [/font_size][/color]\n"
 	label.text += "[color=red][font_size=40]Space or Mouse = Shoot [/font_size][/color]\n"
 	label.text += "[font_size=30]Enter - Start Game[/font_size]\n\n"
-	label.text += "[font_size=30][color=red]Press Space or Enter to Begin[/color][/font_size]"
+	label.text += "[font_size=30][color=red]Press Play Begin[/color][/font_size]"
 
-
-func _on_texture_button_pressed() -> void:
+#next scene
+func _on_button_pressed() -> void:
 	var err := get_tree().change_scene_to_file("res://Story/story_scene1.tscn")
-	print("change_scene err =", err)

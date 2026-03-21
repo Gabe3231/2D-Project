@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxlokjxw7eg2x"]
+[gd_scene load_steps=5 format=3 uid="uid://bxlokjxw7eg2x"]
 
 [ext_resource type="Script" uid="uid://dy20n6hs2upri" path="res://DeathScreen/death_screend.gd" id="1_bj3o6"]
+[ext_resource type="Texture2D" uid="uid://bu2blu857msin" path="res://textures/SpaceBackground.png" id="2_tduw4"]
+[ext_resource type="AudioStream" uid="uid://b65ta0d2qqmkb" path="res://textures/audio/kuzu420-game-over-284367.mp3" id="3_anq34"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_anq34"]
+font_size = 58
 
 [node name="DeathScreen" type="Control"]
 layout_mode = 3
@@ -12,25 +17,45 @@ layout_mode = 0
 offset_right = 801.0
 offset_bottom = 806.0
 
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(410, 411)
+scale = Vector2(7.40625, 7.421875)
+texture = ExtResource("2_tduw4")
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.026
 anchor_right = -0.026
-offset_left = 106.0
-offset_top = 445.0
-offset_right = 298.0
-offset_bottom = 596.0
+offset_left = 55.0
+offset_top = 328.0
+offset_right = 753.0
+offset_bottom = 513.0
 text = "Retry
 "
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 431.0
-offset_top = 442.0
-offset_right = 637.0
-offset_bottom = 590.0
+offset_left = 54.0
+offset_top = 536.0
+offset_right = 760.0
+offset_bottom = 731.0
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 43.0
+offset_right = 695.0
+offset_bottom = 291.0
+text = "YOU DIED"
+label_settings = SubResource("LabelSettings_anq34")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_anq34")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

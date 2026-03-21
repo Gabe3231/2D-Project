@@ -11,7 +11,7 @@ minrotationspeed = 5.0
 maxrotationspeed = 10.0
 life = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["damagable"]]
 position = Vector2(400, -118.000015)
 scale = Vector2(1.3529412, 1.2837838)
 texture = ExtResource("1_omjit")

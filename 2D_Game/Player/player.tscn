@@ -10,7 +10,6 @@ height = 74.0
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(3, 1)
 script = ExtResource("1_4ntmi")
-life = 1
 fireDelay = 0.1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

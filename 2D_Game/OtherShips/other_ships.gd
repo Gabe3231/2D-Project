@@ -17,5 +17,6 @@ func _on_body_entered(body: Node) -> void:
 		body.die()
 		queue_free()
 
+# computer started lagging cuz too many rays
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

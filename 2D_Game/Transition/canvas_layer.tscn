@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://laxbkpikopme"]
+
+[ext_resource type="Script" uid="uid://nydtx1a743ac" path="res://Transition/Fade.gd" id="1_0uejt"]
+
+[node name="Fade" type="CanvasLayer"]
+script = ExtResource("1_0uejt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
+offset_right = 807.0
+offset_bottom = 922.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 18.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
